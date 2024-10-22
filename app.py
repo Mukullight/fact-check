@@ -23,27 +23,22 @@ df = pd.concat([
     pd.DataFrame({"Year": [MIN_YR - 1]})
 ]).sort_values("Year", ignore_index=True).fillna(0)
 
+cyan = "#00ffff"
+light_blue = "#a4c2ff"
+white = "#ffffff"
+red = "#ff0000"
+black = "#000000"
+"""
+colors used for the project are presented above 
+"""
 
-COLORS = {
-    "cash": "#3cb521",
-    "bonds": "#fd7e14",
-    "stocks": "#446e9b",
-    "inflation": "#cd0200",
-    "background": "whitesmoke",
-}
 
 """
 ==========================================================================
-Markdown Text
+Markdown text
+introductio
 """
-
-datasource_text = dcc.Markdown(
-    """
-    [Data source:](http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html)
-    Historical Returns on Stocks, Bonds and Bills from NYU Stern School of
-    Business
-    """
-)
+datasource_text  = dcc.Markdown("The text")
 
 asset_allocation_text = dcc.Markdown(
     """
@@ -571,8 +566,8 @@ app.layout = dbc.Container(
         dbc.Row(
             dbc.Col(
                 html.H2(
-                    "Asset Allocation Visualizer",
-                    className="text-center bg-primary text-white p-2",
+                    "fact-check",
+                    className="text-center bg-primary text- p-2",
                 ),
             )
         ),
